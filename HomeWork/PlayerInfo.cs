@@ -14,6 +14,7 @@ namespace HomeWork
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int BirthdayYear { get; set; }
+        public int MyProperty { get; set; }
 
     }
 
