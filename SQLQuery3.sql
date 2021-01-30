@@ -1,34 +1,4 @@
-﻿select ProductID ,ProductName from Products
-
--- Orderıd toplam tutar
-select OrderID ,SUM( UnitPrice*(1.0- Discount)*Quantity) as "Kazanılan Toplam Miktar"  from [Order Details] GROUP BY OrderID
-
-
--- ProductID tutar
-select ProductID ,
-SUM(UnitPrice*(1.0- Discount)*Quantity) as "Kazanılan Toplam Miktar" 
-from [Order Details] 
-GROUP BY ProductID 
-
-
-
-select * from [Order Details]
-select * from Orders
-
-
-select Products.ProductName 'Ürün Adı', 
-sum([Order Details].Quantity * [Order Details].UnitPrice) 'Kazanılan Toplam Miktar' 
-from Products inner join [Order Details]
-on Products.ProductID=[Order Details].ProductID inner join ORDERS 
-on Orders.OrderID=[Order Details].OrderID
-group by Products.ProductName order by  ProductName
-
-,
-
--- Order toplam tutar
-select OrderID ,SUM( UnitPrice*(1.0- Discount)*Quantity) as "Kazanılan Toplam Miktar"  from [Order Details] GROUP BY OrderID
-
-
+﻿
 -- ProductID tutar
 select ProductID ,
 SUM(UnitPrice*(1.0- Discount)*Quantity) as "Kazanılan Toplam Miktar" 
